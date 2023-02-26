@@ -17,5 +17,5 @@ subdir28-1 subdir29-2 subdir30-3
 fun main() {
     val basedir = File(System.getProperty("user.home") + File.separator + "Downloads" + File.separator + "basedir 2")
     basedir.walk().filter { it.isDirectory && it.list().isEmpty() }
-        .forEach { print("${it.relativeTo(it.parentFile)} ") }
+        .forEach { print("${it.name} ") }
 }
